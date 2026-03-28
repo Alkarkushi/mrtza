@@ -19,9 +19,13 @@ def main():
                     print(f"{index}. {task}")
                     
         elif choice == '2':
-            new_task = input("اكتب المهمة الجديدة: ")
-            tasks.append(new_task)
-            print("تمت إضافة المهمة بنجاح!")
+           new_task = input("اكتب المهمة الجديدة: ").strip()
+
+if new_task == "":
+    print("لا يمكن إضافة مهمة فارغة.")
+else:
+    tasks.append(new_task)
+    print("تمت إضافة المهمة بنجاح!")
             
         elif choice == '3':
             if not tasks:
